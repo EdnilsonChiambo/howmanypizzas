@@ -43,3 +43,42 @@ predicts the number of expected attendees.
 
 While you could provide a single number, it's best to also provide other statistical information. For example,
 what is the confidence interval for a given confidence level?
+
+# My Branch Implementation
+
+This branch adds a the final dataset used for the problem and Jupyter notebook that:
+
+Combines all past events with available check-in data into a single dataset, excluding the most recent event (reserved for testing).
+
+Splits data into training and test sets to compare different models.
+
+Evaluates multiple regression models, including:
+
+Simple Linear Regression
+
+RandomForestRegressor
+
+GradientBoostingRegressor
+
+XGBRegressor
+
+Selects the best-performing model — GradientBoostingRegressor — which predicted 47 attendees for the last event (actual attendance was 48).
+
+Implements bootstrap resampling with XGBRegressor to estimate a 95% confidence interval for predictions.
+
+Evaluates performance using metrics such as MAE and R² 
+
+# Future Improvements
+Feature engineering for short-term trends, e.g.,
+
+Visitors in the last 3 days
+
+Registrations in the final week
+
+% growth in registrations week-over-week
+
+Ratio of registrations to visitors
+
+Experiment with ensemble methods combining multiple models.
+
+Incorporate external data such as weather or nearby events.
